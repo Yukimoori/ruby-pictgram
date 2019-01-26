@@ -36,6 +36,7 @@ gem 'jbuilder', '~> 2.5'
 # この行を追加する
 gem 'bootstrap-sass'
 
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
@@ -49,7 +50,7 @@ group :development, :test do
   gem 'pry-byebug'
   gem 'pry-stack_explorer'
   gem "jquery-rails"
- gem 'bcrypt'
+  gem 'bcrypt'
 
 
 end
@@ -73,3 +74,4 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
