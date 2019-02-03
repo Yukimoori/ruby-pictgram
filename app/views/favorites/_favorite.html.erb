@@ -1,19 +1,16 @@
 <% if topic.favorite_user(current_user.id) %>
-
-  <%# <%= button_to topic_favorites_path(favorites, topic_id: topic.id), method: :delete, id: "favorite-button", remote: true do %> %>
-
-      <%= link_to favorites_path(topic_id: topic.id), method: :delete do %>
-    <%= image_tag("icons/heart_red.png", :class => 'topic-index-icon' )  %>
+  <%= link_to favorites_path(topic_id: topic.id), method: :delete do %>
+    <%= image_tag("icons/heart-red.png", :class => 'topic-index-icon' )  %>
     <span>
       <%= topic.favorites_count %>
     </span>
   <% end %>
-  <% else %>
-    <%# <%= button_to topic_favorites_path(topic),id: "favorite-button", remote: true do %> %>
-    <%= link_to favorites_path(topic_id: topic.id), method: :post do %>
 
-      <%= image_tag("icons/heart.png", :class => 'topic-index-icon' ) %>
+  <% else %>
+    <%= link_to favorites_path(topic_id: topic.id), method: :post do %>
+      <%= image_tag("icons/heart-black.png", :class => 'topic-index-icon' ) %>
       <span>
         <%= topic.favorites_count %>
       </span>
+  <% end %>
 <% end %>

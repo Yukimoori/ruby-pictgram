@@ -4,7 +4,7 @@
     <title>Pictgram</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -19,6 +19,7 @@
           <%= link_to root_path do %>
             <span><%= image_tag "icons/logo.png", class: "navbar-brand" %></span>
           <% end %>
+
           <ul class="nav navbar-nav navbar-right">
             <% if logged_in? %>
               <li>

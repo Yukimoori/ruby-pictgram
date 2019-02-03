@@ -6,7 +6,7 @@ class TopicsController < ApplicationController
   def new
     @topic = Topic.new
   end
-  
+
   def create
     @topic = current_user.topics.new(topic_params)
 
@@ -19,7 +19,7 @@ class TopicsController < ApplicationController
   end
 
   private
-  def topic_params
-    params.require(:topic).permit(:image, :description)
-  end
+    def topic_params
+      params.require(:topic).permit(:image, :description)
+    end
 end
