@@ -1,0 +1,12 @@
+<% if topic.favorite_user(current_user.id) %>
+  <%= link_to favorites_path(topic_id: topic.id), method: :delete do %>
+    <%= image_tag("icons/heart-red.png", :class => 'topic-index-icon' )  %>
+      <%= topic.favorites_count %>
+  <% end %>
+
+  <% else %>
+    <%= link_to favorites_path(topic_id: topic.id), method: :post do %>
+      <%= image_tag("icons/heart-black.png", :class => 'topic-index-icon' ) %>
+        <%= topic.favorites_count %>
+  <% end %>
+<% end %>
