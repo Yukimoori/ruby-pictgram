@@ -13,15 +13,14 @@ class CommentsController < ApplicationController
     #   flash.now[:danger]='投稿に失敗しました'
     #   render:new
     # end
-
     @comment = Comment.create(create_params)
-    binding.pry
+    # binding.pry
       if @comment.persisted?
         redirect_to topics_path, success: 'コメントの投稿に成功しました'
       else
         redirect_to new_topic_comment_path, danger: 'コメントの投稿に失敗しました'
       end
-  end
+    end
 
     private
     # def content_params
