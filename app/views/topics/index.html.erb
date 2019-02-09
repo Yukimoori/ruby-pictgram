@@ -9,10 +9,18 @@
             </h2>
             <%= image_tag topic.image.url %>
             <%= render partial: 'favorites/favorite', locals: { topic: topic, favorites: @favorites}  %>
+
+            <%= link_to comments_new_path(topic_id: topic.id) do %>
             <%= image_tag 'icons/comment.png', class: 'topic-index-icon' %>
-            <p class="topic-text">
-              <%= topic.description %>
+            <% end %>
+            <!-- <p class="topic-text">
+              <%# <%= topic.description %> %>
+            </p> -->
+            <% topic.comments.each do |comment| %>
+            <p class="comment-text">
+                <%= comment.content %>
             </p>
+            <% end %>
           </div>
         </div>
       </div>
