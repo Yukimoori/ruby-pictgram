@@ -35,6 +35,10 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'bootstrap-sass'
 gem "carrierwave"
+gem "jquery-rails"
+gem 'bcrypt'
+gem 'fog-aws'
+gem 'fog'
 
 
 # Reduces boot times through caching; required in config/boot.rb
@@ -48,14 +52,10 @@ group :development, :test do
   gem 'pry-doc'
   gem 'pry-byebug'
   gem 'pry-stack_explorer'
-  gem "jquery-rails"
-  gem 'bcrypt'
-
 
 end
 
-gem 'fog-aws'
-gem 'fog'
+
 
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
